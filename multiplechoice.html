@@ -1,0 +1,49 @@
+{{Front}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function Answer(){
+			var answerSubmits = document.getElementsByName("choice");
+	var valTrue = "{{answer-true}}";
+		var val = "";
+			for(var i = 0; i<= answerSubmits.length; i++){
+					if(answerSubmits[i].checked){
+						val = answerSubmits[i].value;
+					break;
+		}}
+			if(val == ""){
+				alert("please select choice answer");
+			}
+			else if(val === valTrue){
+			
+				alert("Answer false. Please try again!!!");}
+
+			else(
+				alert("Answer false. Please try again!!!")
+		)
+		}
+		</script>
+</head>
+<body>
+
+	<form>
+
+		<input type="radio" id="1" name="choice" value="{{answer1}}">
+		<label for="1"> {{answer1}}</label><br>
+		<input type="radio" id="2" name="choice" value="{{answer2}}">
+		<label for="2">{{answer2}}</label><br>
+		<input type="radio" id="3" name="choice" value="{{answer3}}">
+		<label for="3">{{answer3}}</label><br>
+		<input type="radio" id ="4" name="choice" value="{{answer4}}">
+		<label for="4">{{answer4}}</label><br><br>
+	<input type="button" onclick="Answer()" value="select">
+</form>
+
+</body>
+</html>
+
+
